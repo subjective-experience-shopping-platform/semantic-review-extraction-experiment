@@ -1,0 +1,34 @@
+origin_dataset:
+  source_archives:
+    - data/origin_source/147.속성기반 감정분석 데이터/01-1.정식개방데이터/Training/02.라벨링데이터/TL_쇼핑몰_04.IT기기_4-1.컴퓨터주변기기.zip
+    - data/origin_source/147.속성기반 감정분석 데이터/01-1.정식개방데이터/Validation/02.라벨링데이터/VL_쇼핑몰_04.IT기기_4-1.컴퓨터주변기기.zip
+  output_path: data/dataset.parquet
+
+extract_attribute:
+  attribute_units: data/attribute_units.parquet
+  opinion_units: data/opinion_units.parquet
+  model: gpt-6-luna
+  max_workers: 4
+  cli_path: /Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex
+
+embedding:
+  model_id: snunlp/KR-SBERT-Medium-extended-klueNLItriplet_PARpair_QApair-klueSTS
+  revision: 76aeef8c39c64fc92c7de7d4e926285ce1c43c9f
+  local_model_path: models/snunlp--KR-SBERT-Medium-extended-klueNLItriplet_PARpair_QApair-klueSTS
+  batch_size: 32
+  device: auto
+
+experiment:
+  output_dir: experiment
+
+clustering:
+  excluded_raw_aspects: [전반적 상품 경험]
+  attribute_distance_threshold: 0.22
+  aspect_distance_threshold: 0.3591
+  status_distance_threshold: 0.20
+  centrality_weight_alpha: 0.70
+  status_core_similarity_threshold: 0.65
+
+user_evaluation:
+  task_count: 100
+  random_seed: 17171771
