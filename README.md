@@ -102,8 +102,8 @@ README는 전체 실험 과정을 대략적으로 설명하며 목차는 다음�
 #### 정성적 평가(사용자 평가)
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/subjective-experience-shopping-platform/semantic-review-extraction-experiment/refs/heads/main/assets/experience-1.png" width="49%" />
-  <img src="https://raw.githubusercontent.com/subjective-experience-shopping-platform/semantic-review-extraction-experiment/refs/heads/main/assets/experience-2.png" width="49%" />
+  <img src="https://raw.githubusercontent.com/subjective-experience-shopping-platform/semantic-review-extraction-experiment/refs/heads/main/assets/experience-1.png" alt="리뷰 수준 사용자 블라인드 평가 화면" width="49%" />
+  <img src="https://raw.githubusercontent.com/subjective-experience-shopping-platform/semantic-review-extraction-experiment/refs/heads/main/assets/experience-2.png" alt="군집 수준 사용자 블라인드 평가 화면" width="49%" />
 </div>
 
 리뷰에서 유효한 속성을 적절하게 추출하였는지, 정규화된 군집과 대표명이 의미적으로 적절한지를 확인하기 위해 사용자 블라인드 테스트를 수행합니다.
