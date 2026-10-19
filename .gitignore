@@ -13,3 +13,7 @@ data/origin_source/*
 exact-match-coverage-experiment/*
 .env.*
 !.env.example
+
+# Local coding-agent instructions
+AGENTS.md
+AGNETS.md
